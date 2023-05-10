@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Camelody</title>
+    <meta charset="utf-8" />  
+  </head>
+
+  <body>
+    <div style="background-color: rgb(226, 80, 28);">
+      <div class="row py-2 header">
+        <div class="col">
+          <header class="text-center text-white font-weight-bold">
+            <div id="navBar"></div>
+            <div style="height: 10vh;"></div>
+          </header>
+        </div>
+      </div>
+
+      <!-- Page content row. 
+        flex-grow-1: Fill available space 
+        mb-5 : to ensure that we see all of the content of the page row -->
+      <div id = "toMakeInvisible">
+      <div class="row flex-grow-1 mb-5">
+        <div class="d-none d-md-block col-md left"></div>
+        <div class="col mt-2 text-black text-center">
+          <h4 id="pageTitle"></h4>
+          <div id="page" style="height: 70vh;"></div>
+        </div>
+        <div class="d-none d-md-block col-md right"></div>
+      </div>
+      <div class="col text-center" id="scrollArrow" style="height: 15vh;"></div>
+      </div>
+
+      <!-- Footer row -->
+      
+      <div id="blank-space-for-general-conditions"></div>
+      <div id="rules"></div>
+      <div class="row footer">
+        <div class="col">
+          <footer class="py-2 text-center text-white font-weight-bold">
+            <h5 id="footerText"></h5>
+            <div id="themeSelection"></div>
+          </footer>
+        </div>
+      </div>
+    </div>
+   </body>
+</html>
