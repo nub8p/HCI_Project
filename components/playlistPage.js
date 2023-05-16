@@ -1,9 +1,10 @@
   
   class Music {
-    constructor(title, author, album_pic) {
+    constructor(title, author, album_pic, link) {
       this.title = title;
       this.author = author;
       this.album_pic = album_pic;
+      this.link = link;
     }
   }
   
@@ -28,19 +29,22 @@
   //playlist generation and display
   let playlist = document.querySelector("#playlistDiv");
 
-  let m1 = new Music("Dynamite", "BTS", "./images/spotify_logo.png");
-  let m2 = new Music("Young Blood", "5 seconds of summer", "./images/spotify_logo.png");
-  playlist_list.push(m1, m2);
+  let m1 = new Music("Dynamite", "BTS", "./images/spotify_logo.png", "https://open.spotify.com/track/5aHwYjiSGgJAxy10mBMlDT?si=a3cb43d5539f48ce");
+  let m2 = new Music("Young Blood", "5 seconds of summer", "./images/spotify_logo.png", "https://open.spotify.com/track/2iUXsYOEPhVqEBwsqP70rE?si=b86548bdc1544e27");
+  let m3 = new Music("Title", "Author", "./images/spotify_logo.png", "null");
+  playlist_list.push(m1, m2, m3);
 
   for(let i=0; i<playlist_list.length; i++) {
     playlist.innerHTML += `
-    <button id="playlistBtn" style="width: 100%">
-      <div style="width: 15%; float: left">
-        <img src="` + playlist_list[i].album_pic + `" style="height: 0.8cm;">
-      </div>
-      <div style="margin-left: 15%">
-        <p>` + playlist_list[i].title + `</p>
-        <p>` + playlist_list[i].author + `</p>
-      </div>
-    </button>`
+    <a href="` + playlist_list[i].link + `">
+      <button id="playlistBtn">
+        <div style="width: 15%; float: left">
+          <img src="` + playlist_list[i].album_pic + `" style="height: 2.5cm;">
+        </div>
+        <div style="margin-left: 15%">
+          <p>` + playlist_list[i].title + `</p>
+          <p>` + playlist_list[i].author + `</p>
+        </div>
+      </button>
+    </a>`
   }

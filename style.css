@@ -77,13 +77,27 @@
     cursor: pointer;
   }
 
-  #playlistBtn {
+  #homeBtn {
     border: none;
     border-radius: 50px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 5px 10px;
+    color: aliceblue;
+    cursor: pointer;
+  }
+
+  #playlistBtn {
+    border: none;
+    border-radius: 20px;
     background-color: aliceblue;
     font-weight: bold;
     font-size: 100%;
     padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 0.5cm;
+    cursor: pointer;
   }
 
   #playlistDiv {
@@ -92,7 +106,6 @@
     background-color: tr;
     padding: 20px;
     width: 100%;
-    height: 100%;
   
   }
   
