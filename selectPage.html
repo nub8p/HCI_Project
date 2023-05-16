@@ -12,19 +12,49 @@
       <div class="title_logo">
         <img class="logo_img" src="./images/Camelody.png" />
       </div>
-      <div class="selectPage_Text">
-        <div>
-          <p class="white_title">I want to</p>
-          <p class="white_title white_border">chamelody</p>
-        </div>
-        <div>
-          <button id="curMoodBtn"># current mood</button>
-          <img class="arrowIcon" src="./images/block - arrow.png" />
-          <button id="nxtMoodBtn"># mood I want</button>
-        </div>
-        <div>
-          <p class="white_title selectEmoji_title">Select emoji.</p>
-          <img class="selectEmoji_img" src="./images/selectEmoji.png" />
+      <div class="selectPageContent">
+        <div class="selectPage_Text">
+          <div class="contentDiv">
+            <p class="white_title fadeIn">I want to</p>
+            <p class="white_title white_border fadeIn">chamelody</p>
+          </div>
+          <div class="contentDiv">
+            <button id="curMoodBtn" class="fadeIn">
+              <p id="currMoodText"># current mood</p>
+              <img id="currMoodImg" />
+            </button>
+            <img class="arrowIcon fadeIn" src="./images/block - arrow.png" />
+            <button id="nxtMoodBtn" class="fadeIn">
+              <p id="nextMoodText"># mood I want</p>
+              <img id="nextMoodImg" />
+            </button>
+          </div>
+          <div class="dynamicDiv">
+            <div class="defaultDiv">
+              <p class="white_title selectEmoji_title fadeIn">Select emoji.</p>
+              <img
+                class="selectEmoji_img fadeIn"
+                src="./images/selectEmoji.png"
+              />
+            </div>
+            <div class="selectedDiv">
+              <p class="guide white">
+                Chamelody guides you by drawing an emotion map.
+              </p>
+              <p class="guide white">
+                Shall we follow the playlist created by finding a path between
+                the two emotions of your choice?
+              </p>
+              <p class="guide white">Let's enjoy chamelody playlist.</p>
+              <button id="playListBtn">
+                <p class="playListChild white playListText">Go to Playlist</p>
+                <img
+                  class="playListChild playListImg"
+                  src="./images/headphone.png"
+                />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -41,60 +71,121 @@
           <td>
             <div class="emoji_happy">
               <div class="small_icon">
-                <img class="happy img1" src="./images/happy1.png" />
-                <img class="happy img2" src="./images/happy2.png" />
+                <img
+                  data-tag="happy"
+                  class="emoji happy img1"
+                  src="./images/happy1.png"
+                />
+                <img
+                  data-tag="happy"
+                  class="emoji happy img2"
+                  src="./images/happy2.png"
+                />
               </div>
               <div class="big_icon">
-                <img class="happy img3" src="./images/happy3.png" />
+                <img
+                  data-tag="happy"
+                  class="emoji happy img3"
+                  src="./images/happy3.png"
+                />
               </div>
             </div>
           </td>
           <td>
             <div class="emoji_love">
               <div class="big_icon">
-                <img class="love img1" src="./images/love1.png" />
+                <img
+                  data-tag="love"
+                  class="emoji love img1"
+                  src="./images/love1.png"
+                />
               </div>
               <div class="small_icon">
-                <img class="love img2" src="./images/love2.png" />
-                <img class="love img3" src="./images/love3.png" />
+                <img
+                  data-tag="love"
+                  class="emoji love img2"
+                  src="./images/love2.png"
+                />
+                <img
+                  data-tag="love"
+                  class="emoji love img3"
+                  src="./images/love3.png"
+                />
               </div>
             </div>
           </td>
           <td>
             <div class="emoji_fear">
               <div class="small_icon">
-                <img class="fear img1" src="./images/fear1.png" />
-                <img class="fear img2" src="./images/fear2.png" />
+                <img
+                  data-tag="fear"
+                  class="emoji fear img1"
+                  src="./images/fear1.png"
+                />
+                <img
+                  data-tag="fear"
+                  class="emoji fear img2"
+                  src="./images/fear2.png"
+                />
               </div>
               <div class="big_icon">
-                <img class="fear img3" src="./images/fear3.png" />
+                <img
+                  data-tag="fear"
+                  class="emoji fear img3"
+                  src="./images/fear3.png"
+                />
               </div>
             </div>
           </td>
           <td>
             <div class="emoji_sad">
               <div class="big_icon">
-                <img class="sad img1" src="./images/sad1.png" />
+                <img
+                  data-tag="sad"
+                  class="emoji sad img1"
+                  src="./images/sad1.png"
+                />
               </div>
               <div class="small_icon">
-                <img class="sad img2" src="./images/sad2.png" />
-                <img class="sad img3" src="./images/sad3.png" />
+                <img
+                  data-tag="sad"
+                  class="emoji sad img2"
+                  src="./images/sad2.png"
+                />
+                <img
+                  data-tag="sad"
+                  class="emoji sad img3"
+                  src="./images/sad3.png"
+                />
               </div>
             </div>
           </td>
           <td>
             <div class="emoji_angry">
               <div class="small_icon">
-                <img class="angry img1" src="./images/angry1.png" />
-                <img class="angry img2" src="./images/angry2.png" />
+                <img
+                  data-tag="angry"
+                  class="emoji angry img1"
+                  src="./images/angry1.png"
+                />
+                <img
+                  data-tag="angry"
+                  class="emoji angry img2"
+                  src="./images/angry2.png"
+                />
               </div>
               <div class="big_icon">
-                <img class="angry img3" src="./images/angry3.png" />
+                <img
+                  data-tag="angry"
+                  class="emoji angry img3"
+                  src="./images/angry3.png"
+                />
               </div>
             </div>
           </td>
         </tr>
       </table>
     </div>
+    <script src="./selectPage.js"></script>
   </body>
 </html>
