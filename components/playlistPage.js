@@ -36,15 +36,17 @@
 
   for(let i=0; i<playlist_list.length; i++) {
     playlist.innerHTML += `
-    <a href="` + playlist_list[i].link + `">
-      <button id="playlistBtn">
-        <div style="width: 15%; float: left">
-          <img src="` + playlist_list[i].album_pic + `" style="height: 2.5cm;">
-        </div>
-        <div style="margin-left: 15%">
-          <p>` + playlist_list[i].title + `</p>
-          <p>` + playlist_list[i].author + `</p>
-        </div>
-      </button>
-    </a>`
+    <tr>
+      <a href="` + playlist_list[i].link + `" target="_blank">
+        <button id="playlistBtn">
+          <div style="width: 15%; float: left">
+            <img src="` + playlist_list[i].album_pic + `" style="height: 2.5cm;">
+          </div>
+          <div style="margin-left: 15%">
+            <p>` + playlist_list[i].title + `</p>
+            <p>` + playlist_list[i].author + `</p>
+          </div>
+        </button>
+      </a>
+    </tr>`
   }
