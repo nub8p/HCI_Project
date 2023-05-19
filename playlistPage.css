@@ -16,7 +16,28 @@
     background-color: #ee4f0b;
   }
 
+
+  /*SCROLLBAR*/
+
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
   
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+
   
   .title_logo {
     width: 100%;
@@ -107,6 +128,8 @@
     width: 100%;
     cursor: pointer;
     border: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   #playlistBtn:hover {
@@ -119,6 +142,8 @@
     background-color: tr;
     padding: 20px;
     width: 100%;
+    height: 400px;
+    overflow-y: scroll;
   
   }
   

@@ -32,11 +32,10 @@
   let m1 = new Music("Dynamite", "BTS", "./images/spotify_logo.png", "https://open.spotify.com/track/5aHwYjiSGgJAxy10mBMlDT?si=a3cb43d5539f48ce");
   let m2 = new Music("Young Blood", "5 seconds of summer", "./images/spotify_logo.png", "https://open.spotify.com/track/2iUXsYOEPhVqEBwsqP70rE?si=b86548bdc1544e27");
   let m3 = new Music("Title", "Author", "./images/spotify_logo.png", "null");
-  playlist_list.push(m1, m2, m3);
+  playlist_list.push(m1, m2, m3, m1, m1, m1);
 
   for(let i=0; i<playlist_list.length; i++) {
     playlist.innerHTML += `
-    <tr>
       <a href="` + playlist_list[i].link + `" target="_blank">
         <button id="playlistBtn">
           <div style="width: 15%; float: left">
@@ -47,6 +46,5 @@
             <p>` + playlist_list[i].author + `</p>
           </div>
         </button>
-      </a>
-    </tr>`
+      </a>`
   }
