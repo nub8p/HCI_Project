@@ -278,6 +278,7 @@ body {
   border: none;
   border-radius: 50px;
   background-color: #323232;
+  cursor: pointer;
 }
 
 .playListChild {

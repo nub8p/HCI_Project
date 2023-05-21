@@ -1,0 +1,195 @@
+  /*BACKGROUND*/
+
+  .green_bg {
+    background-color: #2ec364;
+    width: 100%;
+    height: 60%;
+  }
+  
+  .black_bg {
+    background-color: black;
+    width: 100%;
+    height: 40%;
+  }
+
+  .orange_bg {
+    background-color: #ee4f0b;
+  }
+
+
+  /*SCROLLBAR*/
+
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+
+  
+  .title_logo {
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+  
+  .logo_img {
+    width: 20%;
+  }
+  
+  .selectPage_Text {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .white_title {
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .white_border {
+    border: 1px solid white;
+    border-radius: 50px;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  #curMoodBtn,
+  #nxtMoodBtn {
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 5px 10px;
+  }
+
+  #whiteBtn {
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 5px 10px;
+  }
+
+  #blackBtn {
+    border: none;
+    border-radius: 50px;
+    background-color: black;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 5px 10px;
+    color: aliceblue;
+    cursor: pointer;
+  }
+
+  #blackBtn:hover {
+    background-color: slategrey;
+  }
+
+  #homeBtn {
+    border-radius: 50px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 5px 10px;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 1cm;
+    border: dashed;
+  }
+
+  #homeBtn:hover {
+    background-color: aliceblue;
+    color: #ee4f0b;
+  }
+
+  #playlistBtn {
+    border-radius: 20px;
+    background-color: aliceblue;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 5px 10px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #playlistBtn:hover {
+    background-color: antiquewhite;
+  }
+
+  #playlistDiv {
+    border-radius: 25px;
+    background-color: rgba(240, 248, 255, 0.6);
+    background-color: tr;
+    padding: 20px;
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+  
+  }
+  
+  .arrowIcon {
+    height: 30px;
+    vertical-align: middle;
+  }
+  
+  .selectEmoji_img {
+    height: 30px;
+    vertical-align: middle;
+  }
+  
+  .selectEmoji_title {
+    margin-top: 10%;
+  }
+  
+  .emoji_table {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    table-layout: fixed;
+    text-align: center;
+  }
+  
+  .emoji_tag {
+    background-color: rgba(255, 255, 255, 30%);
+    width: 95%;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+    pointer-events: none;
+    font-weight: bold;
+  }
+  
+  .img1,
+  .img2,
+  .img3 {
+    display: inline-block;
+  }
+  
+  .big_icon > img {
+    width: 80%;
+  }
+  
+  .small_icon > img {
+    width: 40%;
+  }
