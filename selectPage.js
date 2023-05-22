@@ -1,3 +1,4 @@
+window.localStorage.clear();
 const colorImg = [
   "happy1.png",
   "happy2.png",
@@ -64,15 +65,21 @@ function changePic() {
       if (selected === 1) {
         currMood = this.dataset["tag"];
         currMoodText.textContent = "# " + currMood;
-        currMoodImg.src = "./images/" + picture;
+        let currSrc = "./images/" + picture;
+        currMoodImg.src = currSrc;
         currMoodImg.style.display = "inline-block";
+        window.localStorage.setItem("currMood", currMood);
+        window.localStorage.setItem("currImg", currSrc);
       } else if (selected === 2) {
         nextMood = this.dataset["tag"];
         nextMoodText.textContent = "# " + nextMood;
-        nextMoodImg.src = "./images/" + picture;
+        let nextSrc = "./images/" + picture;
+        nextMoodImg.src = nextSrc;
         nextMoodImg.style.display = "inline-block";
         defaultDiv.style.display = "none";
         selectedDiv.style.display = "inline-block";
+        window.localStorage.setItem("nextMood", nextMood);
+        window.localStorage.setItem("nextImg", nextSrc);
       }
     }
   } else {
@@ -87,11 +94,15 @@ function changePic() {
       defaultDiv.setAttribute("transform", "none");
       defaultDiv.style.display = "inline-block";
       selectedDiv.style.display = "none";
+      window.localStorage.removeItem("nextMood");
+      window.localStorage.removeItem("nextImg");
     } else if (selected === 0) {
       currMood = "";
       currMoodText.textContent = currMoodDefault;
       currMoodImg.src = "";
       currMoodImg.style.display = "none";
+      window.localStorage.removeItem("currMood");
+      window.localStorage.removeItem("currImg");
     }
   }
 }
