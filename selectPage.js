@@ -95,14 +95,14 @@ function RestartShaking() {
 function mouseover(e) {
   const idx = e.target.dataset.idx;
   if (state[idx] === 0) {
-    e.target.setAttribute("src", "./images/" + hoverImg[idx]);
+    e.target.setAttribute("src", "/images/" + hoverImg[idx]);
   }
 }
 
 function mouseleave(e) {
   const idx = e.target.dataset.idx;
   if (state[idx] === 0) {
-    e.target.setAttribute("src", "./images/" + colorImg[idx]);
+    e.target.setAttribute("src", "/images/" + colorImg[idx]);
   }
 }
 
@@ -113,13 +113,13 @@ function changePic() {
   if (i >= 0) {
     if (selected < 2) {
       selectedList.push(this);
-      this.setAttribute("src", "./images/" + blackImg[i]);
+      this.setAttribute("src", "/images/" + blackImg[i]);
       this.setAttribute("style", "animation-play-state: paused");
       selected += 1;
       if (selected === 1) {
         currMood = this.dataset["tag"];
         currMoodText.textContent = "# " + currMood;
-        let currSrc = "./images/" + colorImg[i];
+        let currSrc = "/images/" + colorImg[i];
         state[i] = 1;
         currMoodImg.src = currSrc;
         currMoodImg.style.display = "inline-block";
@@ -128,7 +128,7 @@ function changePic() {
       } else if (selected === 2) {
         nextMood = this.dataset["tag"];
         nextMoodText.textContent = "# " + nextMood;
-        let nextSrc = "./images/" + colorImg[i];
+        let nextSrc = "/images/" + colorImg[i];
         state[i] = 1;
         nextMoodImg.src = nextSrc;
         nextMoodImg.style.display = "inline-block";
@@ -141,7 +141,7 @@ function changePic() {
     }
   } else {
     i = blackImg.findIndex((i) => i === picture);
-    this.setAttribute("src", "./images/" + colorImg[i]);
+    this.setAttribute("src", "/images/" + colorImg[i]);
     this.setAttribute("style", "animation-play-state: running");
     selected -= 1;
     selectedList = selectedList.filter((e) => {

@@ -22,7 +22,9 @@ emotion_1.innerHTML =
   `<button id="whiteBtn">` +
   "# " +
   emotion_1_value +
-  `<img class="emoji_img" src=${window.localStorage.getItem("currImg")}/>` +
+  `<img class="emoji_img" src=${window.localStorage.getItem(
+    "currImg"
+  )}></img>` +
   `</button> the sin,`;
 
 let emotion_2 = document.querySelector("#emotion_2");
@@ -30,7 +32,9 @@ emotion_2.innerHTML =
   `<button id="whiteBtn">` +
   "# " +
   emotion_2_value +
-  `<img class="emoji_img" src=${window.localStorage.getItem("nextImg")}/>` +
+  `<img class="emoji_img" src=${window.localStorage.getItem(
+    "nextImg"
+  )}></img>` +
   `</button> the sinner`;
 
 //playlist generation and display
