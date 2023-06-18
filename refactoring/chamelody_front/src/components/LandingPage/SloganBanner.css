@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+.slogan-banner-container {
+  /* background-color: aquamarine; */
+  padding-top: 100px;
+  padding-left: 150px;
+}
+
+.slogan-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+.slogan-line {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.slogan-line.center {
+  display: flex;
+  align-items: center;
+}
+
+
+.center > span{
+  margin-bottom: -50px;
+}
+
+
+.highlight-filled {
+  font-weight: 900;
+  background-color: white;
+  color: #2ec364;
+  border-radius: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 3px;
+}
+
+.logo-icon img {
+  transform: scale(0.8);
+}

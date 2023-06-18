@@ -1,0 +1,38 @@
+@keyframes flyingAnimation {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-20px);
+      opacity: 1;
+    }
+  }
+  
+  span {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    animation: flyingAnimation 1.2s ease-in-out forwards;
+    margin-right: 15px;
+  }
+  
+  .word-block-filled-highlight{
+    font-weight: 900;
+    background-color: white;
+    border: 3px solid white;
+    color: #2ec364;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+  }
+  
+  .word-block-line-highlight {
+    border: 3px solid white;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+  }
+  

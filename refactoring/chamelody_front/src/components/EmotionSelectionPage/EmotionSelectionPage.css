@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800;900&display=swap');
+
+/* Set basic styles for the body */
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container for the emotion selection page */
+.selection-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Container for the guide section */
+.guide-container {
+  height: 60%;
+  width: 100%;
+}
+
+/* Background for the emoji bar section */
+.bar_bg {
+  background-color: #222;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/* Container for the message section */
+.message {
+  padding-left: 200px;
+  padding-top: 30px;
+}
+
+/* Container for the content section */
+.contentDiv {
+  padding-left: 200px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for the current mood button and next mood button */
+#curMoodBtn,
+#nxtMoodBtn {
+  padding: 10px 30px;
+  border: none;
+  animation-fill-mode: backwards;
+  border-radius: 50px;
+  color: white;
+  display: flex;
+}
+
+/* Styles for the text inside current mood button and next mood button */
+#curMoodBtn > p,
+#nxtMoodBtn > p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 44px;
+  margin: 0 15px;
+  color: #222;
+  cursor: pointer;
+}
+
+/* Animation delay for the current mood button */
+#curMoodBtn {
+  animation-delay: 0.5s;
+}
+
+/* Styles for the arrow icon */
+.arrowIcon {
+  height: 60px;
+  vertical-align: middle;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  margin: 0 20px;
+}
+
+/* Animation delay for the next mood button */
+#nxtMoodBtn {
+  animation-delay: 1.5s;
+}
+
+#nxtMoodBtn > img, #curMoodBtn > img  {
+  width: 56px;
+}
+
+/* Fade-in animation */
+.fadeIn {
+  animation: fadeInRight 0.5s;
+  position: relative;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.emoji-box {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+  }
+
+/* Add the shake animation */
+@keyframes shakeAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(1deg);
+  }
+  20% {
+    transform: rotate(2deg);
+  }
+  30% {
+    transform: rotate(2deg);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(-1deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.big-emoji.shake, .emoji-cell.shake {
+  animation: shakeAnimation 0.5s infinite;
+}
+
+  .emoji-tag {
+    width: 80%;
+    padding: 5px;
+  }
+
+  .emoji-tag-container {
+    width: 100%;
+    height: 36px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .emoji-field {
+    margin-top: 15px;
+    display: flex;
+    flex-direction :row-reverse;
+    background-color: rgb(55, 55, 55);
+    border-radius: 20px;
+  }
+  
+  .emoji-container {
+    margin-top: 10px;
+
+  }
+  
+  .big-emoji > img {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .emoji-cell > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn-guide > p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+    margin: 3px 18px;
+  }
+
+  
+ .button-wrapper-select {
+  padding-left: 200px;
+  padding-top: 30px;
+  animation: fadeInAnimation 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.button-wrapper-select > button{
+  margin-top: 15px;
+}
+
+.message-select-emoji {
+  padding-left: 200px;
+  padding-top: 40px;
+  font-weight: 700;
+  font-size: 44px;
+  color: white;
+  display: flex;
+  align-items: center;
+  opacity: 0; /* 초기에 투명도를 0으로 설정 */
+  animation: fadeAnimation 0.5s ease-in-out forwards, 
+              floatingAnimation 2s ease-in-out infinite;; /* fadeAnimation 애니메이션 적용 */
+  animation-delay: 2s; /* 2초의 딜레이 추가 */
+  position: relative;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0; /* 시작 시 투명도 0 */
+  }
+  100% {
+    opacity: 1; /* 끝나면 투명도 1 */
+  }
+}
+
+
+@keyframes floatingAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.guide-message > img {
+  width: 44px;
+}
+
+.message-select-emoji > span {
+  margin-bottom: -50px;
+}
+
+.message-item {
+  margin-right: 10px;
+}

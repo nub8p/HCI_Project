@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;900&display=swap');
+.loading-bg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .loading-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .middle-logo {
+    width: 310px;
+    animation: rotateLogo 5s linear infinite;
+  }
+
+  @keyframes rotateLogo {
+    from {
+      transform: scale(0.7) rotate(0deg);
+    }
+    to {
+      transform: scale(0.7) rotate(360deg);
+    }
+  }
+
+  .middle-msg > p {
+    width: 100%;
+    font-family: 'Roboto', sans-sedrif;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin-top: -20px;
+  }
+
+  .loading-container > p{
+    width: 100%;
+    font-family: 'Roboto', sans-sedrif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    margin-top: -20px;
+    
+
+  }
+
+  @keyframes corner-gradient-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .corner-gradient-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .corner-gradient-animation-inner {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    animation: corner-gradient-animation 2s infinite ease-in-out;
+  }
+  
