@@ -15,30 +15,11 @@
     left: 0;
     width: 200%;
     height: 100%;
-    background: linear-gradient(137deg,#6578f2, #9747FF, #f77c99, 
-                                #FFBB30, #2EC364);
-    animation: gradient 16s ease infinite;
+    background: linear-gradient(137deg,#2EC364, #FFBB30, #f77c99,  #6578f2, #9747FF);
+    animation: gradient 10s ease infinite;
     transform-origin: top left;
     z-index: -1;
 }
-
-@-webkit-keyframes gradient {
-    0% { background-position: 0% 50% }
-    50% { background-position: 100% 50% }
-    100% { background-position: 0% 50% }
-  }
-  
-  @-moz-keyframes gradient {
-    0% { background-position: 0% 50% }
-    50% { background-position: 100% 50% }
-    100% { background-position: 0% 50% }
-  }
-  
-  @-o-keyframes gradient {
-    0% { background-position: 0% 50% }
-    50% { background-position: 100% 50% }
-    100% { background-position: 0% 50% }
-  }
 
 @keyframes gradient {
     0% { transform: translateX(0%);}
@@ -138,6 +119,7 @@
 }
 
 .playlist-list {
+    display: flex;
     background-color: white;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -178,13 +160,13 @@
     align-items: flex-start;
     justify-content: center;
     pointer-events: none;
-    z-index: 9999;
+    z-index: -1;
   }
-  
   .emoji-falling {
     font-size: 40px;
-    animation: emoji-fall 3s linear;
+    animation: emoji-fall 3s linear infinite;
     opacity: 0;
+    animation-delay: 0ms; /* Initial delay, will be updated dynamically */
   }
   
   @keyframes emoji-fall {
@@ -194,7 +176,10 @@
     }
     100% {
       transform: translateY(100vh);
-      opacity: 0;
+      opacity: 0.3;
     }
   }
-  
+  .album-cover > img {
+    width: 40px;
+    margin-right: 15px;
+  } 

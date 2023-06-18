@@ -105,9 +105,18 @@ const EmotionSelectionPage = () => {
               id="curMoodBtn"
               className="fadeIn"
               onClick={() => handleCancelClick('curMoodBtn')}
-             
             >
-              <p id="currMoodText">{currentMoodImg ? `# ${currentMoodImg.slice(0, -1)}` : '# current mood'}</p>
+              <p id="currMoodText"> #
+                {currentMoodImg && (
+                  <>
+                    {currentMoodImg.slice(-1) === '1' && ' extremely'}
+                    {currentMoodImg.slice(-1) === '2' && ' very'}
+                    {currentMoodImg.slice(-1) === '3' && ' quite'}
+                  </>
+                )}
+                {currentMoodImg ? ` ${currentMoodImg.slice(0, -1)}` : ' current mood'}
+              </p>
+              
               {currentMoodImg && <Emoji emotion={currentMoodImg} mode = 'display'/>}
             </button>
             <img className="arrowIcon fadeIn" src={arrow} alt="arrow" />
@@ -116,7 +125,17 @@ const EmotionSelectionPage = () => {
               className="fadeIn"
               onClick={() => handleCancelClick('nxtMoodBtn')}
             >
-              <p id="nextMoodText">{nextMoodImg ? `# ${nextMoodImg.slice(0, -1)}` : '# mood i want'}</p>
+              
+              <p id="nextMoodText"> #
+                {nextMoodImg && (
+                  <>
+                    {nextMoodImg.slice(-1) === '1' && ' extremely'}
+                    {nextMoodImg.slice(-1) === '2' && ' very'}
+                    {nextMoodImg.slice(-1) === '3' && ' quite'}
+                  </>
+                )}
+                {nextMoodImg ? ` ${nextMoodImg.slice(0, -1)}` : ' mood I want'}
+              </p>
               {nextMoodImg && <Emoji emotion={nextMoodImg} mode = 'display'/>}
             </button>
           </div>
